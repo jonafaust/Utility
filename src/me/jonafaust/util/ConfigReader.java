@@ -23,7 +23,7 @@ public class ConfigReader {
             FileWriter writer = new FileWriter(file);
             writer.write(this.config);
             writer.close();
-            System.out.println("Config created");
+            System.out.println("The config.properties file has been created. The system will now exit so that the file can be configured. ");
             System.exit(1);
         }
         this.properties = new Properties();
@@ -37,7 +37,7 @@ public class ConfigReader {
             FileWriter writer = new FileWriter(file);
             writer.write(config);
             writer.close();
-            System.out.println("Config created");
+            System.out.println("The config.properties file has been created. The system will now exit so that the file can be configured. ");
             System.exit(1);
         }
         this.properties = new Properties();

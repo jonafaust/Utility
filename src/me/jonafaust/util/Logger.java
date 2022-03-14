@@ -61,28 +61,28 @@ public class Logger {
         }
     }
 
-    public void log(String msg) {
-        out("[log] " + msg);
-        logToFile("[log] " + msg);
+    public void log(Object msg) {
+        out("[log] " + msg.toString());
+        logToFile("[log] " + msg.toString());
     }
 
-    public void warn(String msg) {
-        out(ANSI_YELLOW + "[warn] " + ANSI_RESET + msg);
-        logToFile("[warn] " + msg);
+    public void warn(Object msg) {
+        out(ANSI_YELLOW + "[warn] " + ANSI_RESET + msg.toString());
+        logToFile("[warn] " + msg.toString());
     }
 
-    public void error(String msg) {
-        out(ANSI_RED + "[error] " + msg + ANSI_RESET);
-        logToFile("[error] " + msg);
+    public void error(Object msg) {
+        out(ANSI_RED + "[error] " + msg.toString() + ANSI_RESET);
+        logToFile("[error] " + msg.toString());
     }
 
-    public void debug(String msg) {
-        out(ANSI_CYAN + "[debug] " + ANSI_RESET + msg);
-        logToFile("[debug] " + msg);
+    public void debug(Object msg) {
+        out(ANSI_CYAN + "[debug] " + ANSI_RESET + msg.toString());
+        logToFile("[debug] " + msg.toString());
     }
 
-    public void success(String msg) {
-        out(ANSI_GREEN + "[success] " + ANSI_RESET + msg);
-        logToFile("[success] " + msg);
+    public void success(Object msg) {
+        out(ANSI_GREEN + "[success] " + ANSI_RESET + msg.toString());
+        logToFile("[success] " + msg.toString());
     }
 }
