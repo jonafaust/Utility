@@ -38,3 +38,38 @@ public class Main {
     }
 }
 ````
+
+
+The utility package has its own logger. 
+To instantiate the logger you need the LoggerFactory, shown in this example:
+
+```java
+import me.jonafaust.util.Logger;
+import me.jonafaust.util.LoggerFactory;
+
+public class Main {
+    public static void main(String[] args) {
+
+        //Create the LoggerFactory
+        LoggerFactory loggerFactory = new LoggerFactory();
+
+        //Enable logging to a file. 
+        loggerFactory.setFileLogging(true);
+
+        //Disable Network Logging (Not implemented yet)
+        loggerFactory.setNetworkLogging(false);
+
+        //Build the Logger 
+        Logger logger = loggerFactory.buildLogger();
+        
+        
+        //Different log options
+        logger.log("Hello World");
+        logger.debug("Hello Developer");
+        logger.success("success");
+        logger.warn("Warning");
+        logger.error("An error occurred while performing a hello world application");
+    }
+}
+
+```
